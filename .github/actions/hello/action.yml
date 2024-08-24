@@ -14,6 +14,6 @@ runs:
   steps:
     - run: echo Hello ${{ inputs.the-caller }}
     - id: random-number-generator
-      run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
+      run: echo "::set-output name=random-id::$(echo $RANDOM)"
       
