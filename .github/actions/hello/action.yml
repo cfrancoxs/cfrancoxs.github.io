@@ -12,8 +12,8 @@ outputs:
 runs:
   using: "composite"
   steps:
+    shell: bash
     - run: echo Hello ${{ inputs.the-caller }}
     - id: random-number-generator
-      shell: bash
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       
